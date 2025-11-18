@@ -9,6 +9,13 @@ on:
     
 
 jobs:
+  pre-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: clean workspace
+        run: |
+          echo "cleaning workspace"
+          echo "workspace clean"
   build:
     runs-on: ubuntu-latest
 
