@@ -70,7 +70,7 @@ jobs:
        
 
       - run: npm install
-      - run: npm run build
+      - run:  npm run build -- --base-href /Angular_first/ 
 
       - name: Upload static files as artifact
         id: package
