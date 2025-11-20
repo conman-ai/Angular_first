@@ -58,21 +58,20 @@ jobs:
           node-version: '22.x'
 
       - name: configure github pages
-        uses: actions/configure-pages@v3
-        with:
-          static_site_generator: next
+        uses: actions/configure-pages@v5.0.0
+       
 
       - run: npm install
       - run: npm run build
 
       - name: upload artifacts
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v4.0.0
         with: 
           path: "./out"
 
       - name: deploy
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4.0.5
 
     
     
