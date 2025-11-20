@@ -70,13 +70,13 @@ jobs:
        
 
       - run: npm install
-      - run:  npm run build -- --base-href /Angular_first/ 
+      - run:  npm run build
 
       - name: Upload static files as artifact
         id: package
         uses: actions/upload-pages-artifact@v4.0.0 # or specific "vX.X.X" version tag for this action
         with:
-          path: "./dist/learn"
+          path: "./dist/learn/browser"
 
       - name: Deploy to GitHub Pages
         id: deployment
