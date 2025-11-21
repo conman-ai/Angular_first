@@ -78,6 +78,12 @@ jobs:
         with:
           path: "./dist/learn/browser"
 
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: my-artifacts              # The name you want for the artifact
+          path: "./dist/learn/browser"
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4.0.5
